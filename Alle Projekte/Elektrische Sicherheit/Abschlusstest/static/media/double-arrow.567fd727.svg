@@ -1,0 +1,5 @@
+<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <rect y="28" width="28" height="28" rx="14" fill="white" />
+    <path class="arrows" d="M15.1406 10.5L18.6406 14L15.1406 17.5" stroke="#363E4E" stroke-linecap="round" />
+    <path class="arrows" d="M10.041 10.5L13.541 14L10.041 17.5" stroke="#363E4E" stroke-linecap="round" />
+</svg>

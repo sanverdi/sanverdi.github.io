@@ -1,0 +1,18 @@
+<svg class="icon" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="paint0Linear316" x1="1.5" y1="12" x2="22.5" y2="12" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2CBD9A"/>
+      <stop offset="1" stop-color="#65C86D"/>
+    </linearGradient>
+  </defs>
+  <!-- Spot frame -->
+  <path class="svg-frame" d="M20.75 11C20.75 16.3849 16.3849 20.75 11 20.75H1.25V11C1.25 5.61506 5.61506 1.25 11 1.25C16.3849 1.25 20.75 5.61506 20.75 11Z" fill="white" stroke="#363E4E" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Background gradient -->
+  <path class="svg-background" d="M21.5 11C21.5 16.7991 16.7991 21.5 11 21.5H0.5V11C0.5 5.20085 5.20085 0.5 11 0.5C16.7991 0.5 21.5 5.20085 21.5 11Z" fill="url(#paint0Linear316)"/>
+  <!-- Dots -->
+  <g class="svg-dots">
+    <circle cx="6.2" cy="11.45" r="1.2" />
+    <circle cx="10.9246" cy="11.45" r="1.2" />
+    <circle cx="15.6492" cy="11.45" r="1.2" />
+  </g>
+</svg>

@@ -1,0 +1,37 @@
+<!doctype html><html lang="auto"><head><title>easygenerator</title><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"><meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"><meta http-equiv="Pragma" content="no-cache"><meta http-equiv="Expires" content="0"><link rel="stylesheet" href="../fonts/fonts.css"/><link href="main.css" rel="stylesheet"></head><body><div id="app-printable"></div><script>const STREAK_TARGET = 6;
+    const isPreview = window.location.pathname.includes('/preview/');
+    const isLocalhost = window.location.hostname === 'localhost';
+
+    if (!isPreview && !isLocalhost) {
+      window.location.href = '/404';
+    }
+
+    document.onreadystatechange = function () {
+      if (document.readyState === 'complete') {
+        window.addEventListener('load', initPage);
+      }
+    };
+
+    function initPage() {
+      let { images } = document;
+      let allRequestsCompleted = false;
+      let zeroActiveStreak = 0;
+      const requestsTracker = setInterval(() => {
+        if (window.__activeRequestsCount === 0) {
+          zeroActiveStreak++;
+          if (zeroActiveStreak === STREAK_TARGET) {
+            allRequestsCompleted = true;
+            clearInterval(requestsTracker);
+          }
+        } else {
+          zeroActiveStreak = 0;
+        }
+      }, 500);
+
+      const imagesTracker = setInterval(() => {
+        if (allRequestsCompleted && [...document.images].every(image => image.complete)) {
+          clearInterval(imagesTracker);
+          document.body.classList.add('print-ready');
+        }
+      }, 600);
+    }</script><script src="bundle.c967d594bf5bd4aaa279.js"></script></body></html>
