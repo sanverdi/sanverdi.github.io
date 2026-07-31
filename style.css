@@ -16,6 +16,10 @@
   --clay-tint-strong: rgba(122, 98, 80, 0.15);
 
   --max-width: 880px;
+
+  /* Titelzeile im Werdegang – der Zeitstrahl-Punkt richtet sich danach aus */
+  --entry-title-size: 1.15rem;
+  --entry-title-line: 1.2;
   --font-display: "Fraunces", "Iowan Old Style", Georgia, serif;
   --font-body: "Karla", "Segoe UI", system-ui, sans-serif;
 }
@@ -100,20 +104,28 @@ header.hero .tagline {
   flex-wrap: wrap;
 }
 
-.contact-links a {
+.contact-links .icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.9rem;
+  height: 2.9rem;
   color: #FBF6EF;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.95rem;
-  border: 1px solid rgba(251, 246, 239, 0.35);
-  border-radius: 999px;
-  padding: 0.4rem 1.1rem;
+  border: 1px solid rgba(251, 246, 239, 0.4);
+  border-radius: 50%;
   transition: background 0.15s ease, border-color 0.15s ease;
 }
 
-.contact-links a:hover {
-  background: rgba(251, 246, 239, 0.14);
-  border-color: rgba(251, 246, 239, 0.7);
+.contact-links .icon-link svg {
+  width: 1.35rem;
+  height: 1.35rem;
+  display: block;
+}
+
+.contact-links .icon-link:hover,
+.contact-links .icon-link:focus-visible {
+  background: rgba(251, 246, 239, 0.16);
+  border-color: rgba(251, 246, 239, 0.85);
 }
 
 /* ---------- Navigation ---------- */
@@ -183,72 +195,31 @@ section h2::after {
 
 /* ---------- Über mich ---------- */
 
-.facts-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
-  gap: 1rem;
-  margin-bottom: 2.5rem;
+/* Fließtextblöcke in "Über mich" und "Projekte".
+   Bewusst ohne feste Breite: Der Text folgt der Containerbreite und liegt
+   damit bündig zur Kante der Karten – auf jeder Bildschirmgröße. */
+.about-text p,
+.intro-text p {
+  margin: 0 0 1rem;
 }
 
-.fact {
-  background: var(--clay-tint);
-  border: 1px solid var(--sand-200);
-  border-left: 4px solid var(--terracotta);
-  border-radius: 10px;
-  padding: 1.1rem 1.2rem;
+.about-text p:last-child,
+.intro-text p:last-child {
+  margin-bottom: 0;
 }
 
-.fact-number {
-  display: block;
-  font-family: var(--font-display);
-  font-variation-settings: "SOFT" 60, "WONK" 1;
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: var(--clay-900);
-  line-height: 1.1;
-  margin-bottom: 0.35rem;
-}
-
-.fact-label {
-  display: block;
-  font-size: 0.9rem;
-  line-height: 1.5;
-  color: var(--clay-600);
+.intro-text {
+  margin-bottom: 2rem;
 }
 
 .subhead {
   font-size: 1.15rem;
   margin: 0 0 0.9rem;
-}
-
-.highlights {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-  max-width: 70ch;
-}
-
-.highlights li {
-  position: relative;
-  padding-left: 1.6rem;
-  margin-bottom: 0.9rem;
-}
-
-.highlights li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0.62em;
-  width: 8px;
-  height: 8px;
-  border-radius: 2px;
-  transform: rotate(45deg);
-  background: var(--olive);
-}
-
-.highlights strong {
-  color: var(--clay-900);
   font-weight: 700;
+}
+
+.group-heading {
+  margin-top: 2.5rem;
 }
 
 /* ---------- Werdegang ---------- */
@@ -263,8 +234,13 @@ section h2::after {
 .entry::before {
   content: "";
   position: absolute;
-  left: -7px;
-  top: 0.45rem;
+  /* Waagerecht: Die Linie ist 2px breit, ihre Mitte liegt 1px links der Innenkante.
+     Senkrecht: auf die Mitte der ersten Titelzeile.
+     translate(-50%, -50%) zentriert den Punkt auf beiden Achsen – unabhängig
+     von seiner eigenen Größe. */
+  left: -1px;
+  top: calc(var(--entry-title-size) * var(--entry-title-line) / 2);
+  transform: translate(-50%, -50%);
   width: 12px;
   height: 12px;
   border-radius: 50%;
@@ -278,7 +254,8 @@ section h2::after {
 
 .entry h3 {
   margin: 0;
-  font-size: 1.15rem;
+  font-size: var(--entry-title-size);
+  line-height: var(--entry-title-line);
 }
 
 .entry .org {
