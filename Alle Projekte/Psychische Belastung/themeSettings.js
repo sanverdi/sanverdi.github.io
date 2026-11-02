@@ -1,11 +1,11 @@
 {
   "branding": {
     "logo": {
-      "url": "media/6e7ad12c-4079-4f32-a5ac-869bb79d4ac6.png",
+      "url": "media/5fc5efd6-79f4-4963-bdd1-ca6d4cff7d2f.png",
       "allowToShowLogo": true
     },
     "alternativeLogo": {
-      "url": "media/9e14e7ac-f971-437c-a462-b5195fd15385.png"
+      "url": "media/1582f92e-721a-433b-bc0d-12f11350aec8.png"
     },
     "colors": [
       {
@@ -46,7 +46,7 @@
         "brightness": null,
         "color": null,
         "image": {
-          "url": "media/1404c8ed-f29f-499e-a307-8ba49dab989a.png",
+          "url": "media/1741fa3b-33eb-4ce2-882c-b9b08f76f0c5.png",
           "option": "fullscreen"
         },
         "coverOverlay": {
@@ -57,7 +57,7 @@
         "microlearningBrightness": null,
         "microlearningColor": null,
         "microlearningImage": {
-          "url": "media/54603e6f-f2e5-44c0-8c2b-8378c59bccc1.jpg"
+          "url": "media/41ca1424-708c-47bd-9d59-3f7ff4e3d799.jpg"
         },
         "allowToShowMicrolearningBg": false,
         "microlearningCoverOverlay": {
@@ -75,10 +75,10 @@
       }
     },
     "microlearningLogo": {
-      "url": "media/2e5b3790-9804-4bb6-aadf-dcf43ae719bb.png"
+      "url": "media/95157e34-1f63-4850-b629-b493d944983a.png"
     },
     "microlearningAlternativeLogo": {
-      "url": "media/0f42a7cb-58e2-45a1-9ef0-57c2ee61a78f.png"
+      "url": "media/5a6d7a41-d698-4216-8966-29887d260b73.png"
     }
   },
   "fonts": [

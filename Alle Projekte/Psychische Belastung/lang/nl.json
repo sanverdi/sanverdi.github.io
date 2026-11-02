@@ -535,7 +535,7 @@
     "[error signup common]": "Something went wrong during the account registration process. Please contact support at support@easygenerator.com",
     "[no content to show]": "No content to show",
     "[error too many attempts]": "Too many failed login attempts. Please try again later",
-    "[error signin common]": "Something went wrong during the sign in, please try again or contact support",
+    "[error signin common]": "Something went wrong while signing in. Please try again or contact support",
     "[verify account]": "Verify account",
     "[section index]": "Section {index}",
     "[access roleplay steps]": "<ol><li>Click on <strong>Verify account</strong> below</li>\n<li>A new tab will open confirming your verification</li>\n<li>Return here and click <strong>Continue</strong> to start the roleplay</li></ol>",
@@ -566,5 +566,6 @@
     "[a11y label show more]": "This block hides extra information until you ask to see it. Press Tab to focus the heading, then press Enter or Space to expand the block and reveal its content. Press Enter or Space again to collapse it. The hidden content may include text, images, or other content blocks.",
     "[thats correct]": "Dat klopt!",
     "[thats incorrect]": "Dat klopt niet!",
-    "[a11y label carousel]": "This is an image carousel that shows one slide at a time. Press Tab to focus the previous-slide and next-slide buttons, then press Enter or Space to move to the previous or next slide. With a slide button focused you can also press the Left or Right arrow key to change slides without moving focus. Each time the slide changes you will hear its position, such as \\\"Slide 3 of 5\\\", along with the image description. Each slide may show an image or other content. You can view the slides in any order, and you do not need to view all of them to continue."
+    "[a11y label carousel]": "This is an image carousel that shows one slide at a time. Press Tab to focus the previous-slide and next-slide buttons, then press Enter or Space to move to the previous or next slide. With a slide button focused you can also press the Left or Right arrow key to change slides without moving focus. Each time the slide changes you will hear its position, such as \\\"Slide 3 of 5\\\", along with the image description. Each slide may show an image or other content. You can view the slides in any order, and you do not need to view all of them to continue.",
+    "[passed course message]": "You have passed this course with a score of {x}%!"
 }
